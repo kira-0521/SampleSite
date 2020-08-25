@@ -6,6 +6,10 @@ Stylesheet: ベーススタイル
 body {
     font-family: 'Kameron', 'Noto Sans JP', sans-serif;
 }
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
 .font-sm {
     font-size: 14px;
 }
@@ -35,4 +39,26 @@ body {
     width: 90%;
     margin: 0 auto;
     max-width: $contentMaxWidth;
+}
+
+.main-title {
+    @extend .font-lg;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.sub-title {
+    @extend .font-sum;
+    color: $cSubTitle;
+}
+.houses {
+    @extend .content-width;
+
+    &__title {
+        @extend .font-lr;
+        @extend .mb-sm;
+    }
+
+    &__btn {
+        text-align: center;
+    }
 }
