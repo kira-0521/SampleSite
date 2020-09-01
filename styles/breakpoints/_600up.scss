@@ -3,3 +3,53 @@
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+.flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.houses {
+    //innerにはbasesで.flexを継承しているため記述は必要ない。
+    &__inner {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__item {
+        flex-basis: 50%;
+        margin-bottom: 60px;
+    }
+}
+.popular {
+    &__container {
+        justify-content: space-between;
+    }
+    &__item {
+        flex-basis: 47%;
+    }
+}
+
+.travel {
+    &__inner {
+        padding: 50px;
+    }
+    &__img,
+    &__texts {
+        flex-basis: 47%;
+    }
+
+    &__texts {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.footer {
+    & .logo {
+        justify-content: flex-start;
+    }
+
+    &__li {
+        margin-left: 0;
+        margin-right: 30px;
+    }
+}
